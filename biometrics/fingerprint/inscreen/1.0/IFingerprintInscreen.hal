@@ -16,7 +16,17 @@
 
 package vendor.lineage.biometrics.fingerprint.inscreen@1.0;
 
+import IFingerprintInscreenCallback;
+
 interface IFingerprintInscreen {
+    /**
+     * Information on the position of the scanner
+     * Note: X and Y are the left-upper corner of the
+     * FOD view, not the center.
+     */
+    getPositionX() generates (int32_t x);
+    getPositionY() generates (int32_t y);
+    getSize() generates (int32_t size);
     /**
      * Called when fingerprint enrollment started
      */
@@ -70,4 +80,9 @@ interface IFingerprintInscreen {
      * according to the previous events.
      */
     shouldBoostBrightness() generates (bool ret);
+    /**
+     * This function is used to register a callback function which is
+     * called by the HAL whenever there is a finger up/down event.
+     */
+    oneway setCallback(IFingerprintInscreenCallback callback);
 };
