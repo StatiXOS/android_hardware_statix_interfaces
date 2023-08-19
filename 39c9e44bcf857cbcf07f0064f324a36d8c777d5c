@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9b147d6f_fb03f231",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000052
+      },
+      "writtenOn": "2023-08-19T01:46:46Z",
+      "side": 1,
+      "message": "Would appreciate if this could be developed on LineageOS first, so we at least have the same interface across custom ROM to avoid bad stuff from happening :)",
+      "revId": "39c9e44bcf857cbcf07f0064f324a36d8c777d5c",
+      "serverId": "039621b9-0c7c-40f3-867c-684f4bc911d6"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "64a3e29d_e77894ed",
+        "filename": "health/aidl/aidl_api/vendor.lineage.health/1/.hash",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000052
+      },
+      "writtenOn": "2023-08-19T01:46:46Z",
+      "side": 1,
+      "message": "Don\u0027t, bump to v2",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 40
+      },
+      "revId": "39c9e44bcf857cbcf07f0064f324a36d8c777d5c",
+      "serverId": "039621b9-0c7c-40f3-867c-684f4bc911d6"
+    }
+  ]
+}
