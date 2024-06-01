@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8970eee2_9d6ede51",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000177
+      },
+      "writtenOn": "2024-06-01T17:49:37Z",
+      "side": 1,
+      "message": "Duplicate of https://review.statixos.com/c/android_hardware_statix_interfaces/+/13996",
+      "revId": "d9e17a4ff8e9875d01ea7b7cd5784a1eb81a623c",
+      "serverId": "039621b9-0c7c-40f3-867c-684f4bc911d6"
+    }
+  ]
+}
