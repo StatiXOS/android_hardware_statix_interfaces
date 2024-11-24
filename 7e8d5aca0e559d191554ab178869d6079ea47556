@@ -16,6 +16,24 @@
       "message": "convert to aidl",
       "revId": "7e8d5aca0e559d191554ab178869d6079ea47556",
       "serverId": "039621b9-0c7c-40f3-867c-684f4bc911d6"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fe93738e_c6299929",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000125
+      },
+      "writtenOn": "2024-11-24T14:19:26Z",
+      "side": 1,
+      "message": "This HIDL isn\u0027t working as of now, and I\u0027m still debugging it.",
+      "parentUuid": "b6e4a60d_b189515d",
+      "revId": "7e8d5aca0e559d191554ab178869d6079ea47556",
+      "serverId": "039621b9-0c7c-40f3-867c-684f4bc911d6"
     }
   ]
 }
