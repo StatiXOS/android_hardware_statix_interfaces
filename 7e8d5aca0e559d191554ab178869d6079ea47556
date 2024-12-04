@@ -34,6 +34,24 @@
       "parentUuid": "b6e4a60d_b189515d",
       "revId": "7e8d5aca0e559d191554ab178869d6079ea47556",
       "serverId": "039621b9-0c7c-40f3-867c-684f4bc911d6"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "13ad0b32_981fd50f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-12-04T14:30:25Z",
+      "side": 1,
+      "message": "we have an aidl default impl, pls debug that instead.",
+      "parentUuid": "fe93738e_c6299929",
+      "revId": "7e8d5aca0e559d191554ab178869d6079ea47556",
+      "serverId": "039621b9-0c7c-40f3-867c-684f4bc911d6"
     }
   ]
 }
