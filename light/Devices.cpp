@@ -98,6 +98,7 @@ static std::vector<RgbLedDevice> getNotificationRgbLedDevices() {
 }
 
 static const std::string kNotificationLedDevices[] = {
+        "charging",
         "left",
         "white",
 };
