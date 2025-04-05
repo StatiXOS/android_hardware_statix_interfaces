@@ -19,6 +19,7 @@ on early-boot
     chown system system /sys/class/leds/blue/pause_lo
     chown system system /sys/class/leds/blue/ramp_step_ms
     chown system system /sys/class/leds/blue/start_idx
+    chown system system /sys/class/leds/blue/trigger
 
     chown system system /sys/class/leds/button-backlight/blink
     chown system system /sys/class/leds/button-backlight/breath
@@ -29,6 +30,7 @@ on early-boot
     chown system system /sys/class/leds/button-backlight/pause_lo
     chown system system /sys/class/leds/button-backlight/ramp_step_ms
     chown system system /sys/class/leds/button-backlight/start_idx
+    chown system system /sys/class/leds/button-backlight/trigger
 
     chown system system /sys/class/leds/button-backlight1/blink
     chown system system /sys/class/leds/button-backlight1/breath
@@ -39,6 +41,7 @@ on early-boot
     chown system system /sys/class/leds/button-backlight1/pause_lo
     chown system system /sys/class/leds/button-backlight1/ramp_step_ms
     chown system system /sys/class/leds/button-backlight1/start_idx
+    chown system system /sys/class/leds/button-backlight1/trigger
 
     chown system system /sys/class/leds/green/blink
     chown system system /sys/class/leds/green/breath
@@ -49,6 +52,7 @@ on early-boot
     chown system system /sys/class/leds/green/pause_lo
     chown system system /sys/class/leds/green/ramp_step_ms
     chown system system /sys/class/leds/green/start_idx
+    chown system system /sys/class/leds/green/trigger
 
     chown system system /sys/class/leds/lcd-backlight/blink
     chown system system /sys/class/leds/lcd-backlight/breath
@@ -59,6 +63,7 @@ on early-boot
     chown system system /sys/class/leds/lcd-backlight/pause_lo
     chown system system /sys/class/leds/lcd-backlight/ramp_step_ms
     chown system system /sys/class/leds/lcd-backlight/start_idx
+    chown system system /sys/class/leds/lcd-backlight/trigger
 
     chown system system /sys/class/leds/left/blink
     chown system system /sys/class/leds/left/breath
@@ -69,6 +74,7 @@ on early-boot
     chown system system /sys/class/leds/left/pause_lo
     chown system system /sys/class/leds/left/ramp_step_ms
     chown system system /sys/class/leds/left/start_idx
+    chown system system /sys/class/leds/left/trigger
 
     chown system system /sys/class/leds/red/blink
     chown system system /sys/class/leds/red/breath
@@ -79,6 +85,7 @@ on early-boot
     chown system system /sys/class/leds/red/pause_lo
     chown system system /sys/class/leds/red/ramp_step_ms
     chown system system /sys/class/leds/red/start_idx
+    chown system system /sys/class/leds/red/trigger
 
     chown system system /sys/class/leds/rgb/rgb_blink
 
@@ -91,6 +98,7 @@ on early-boot
     chown system system /sys/class/leds/white/pause_lo
     chown system system /sys/class/leds/white/ramp_step_ms
     chown system system /sys/class/leds/white/start_idx
+    chown system system /sys/class/leds/white/trigger
 
 service vendor.light-default /vendor/bin/hw/android.hardware.light-service.lineage
     class hal
