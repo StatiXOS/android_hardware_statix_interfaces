@@ -3,12 +3,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#include "Devices.h"
+#include <Devices.h>
 
 #define LOG_TAG "Devices"
 
 #include <android-base/logging.h>
-
 #include <filesystem>
 
 namespace aidl {
@@ -46,7 +45,7 @@ static std::vector<BacklightDevice> getBacklightDevices() {
 
     for (const auto& device : kBacklightDevices) {
         BacklightDevice backlight(device);
-        if (backlight.exists()) {
+        if (backlight.isOk()) {
             LOG(INFO) << "Found backlight device: " << backlight.getName();
             devices.push_back(backlight);
         }
@@ -57,7 +56,7 @@ static std::vector<BacklightDevice> getBacklightDevices() {
         LOG(INFO) << "Scanning for backlight devices.";
         for (const auto& device : getSubDirs("/sys/class/backlight/")) {
             BacklightDevice backlight(device);
-            if (backlight.exists()) {
+            if (backlight.isOk()) {
                 LOG(INFO) << "Found backlight device: " << backlight.getName();
                 devices.push_back(backlight);
             }
@@ -77,7 +76,7 @@ static std::vector<LedDevice> getBacklightLedDevices() {
 
     for (const auto& device : kLedBacklightDevices) {
         LedDevice backlight(device);
-        if (backlight.exists()) {
+        if (backlight.isOk()) {
             LOG(INFO) << "Found backlight LED device: " << backlight.getName();
             devices.push_back(backlight);
         }
@@ -96,7 +95,7 @@ static std::vector<LedDevice> getButtonLedDevices() {
 
     for (const auto& device : kButtonLedDevices) {
         LedDevice button(device);
-        if (button.exists()) {
+        if (button.isOk()) {
             LOG(INFO) << "Found button LED device: " << button.getName();
             devices.emplace_back(button);
         }
@@ -114,7 +113,7 @@ static std::vector<LedDevice> getKeyboardLedDevices() {
 
     for (const auto& device : kKeyboardLedDevices) {
         LedDevice keyboard(device);
-        if (keyboard.exists()) {
+        if (keyboard.isOk()) {
             LOG(INFO) << "Found keyboard LED device: " << keyboard.getName();
             devices.emplace_back(keyboard);
         }
@@ -136,7 +135,7 @@ static std::vector<RgbLedDevice> getNotificationRgbLedDevices() {
         LedDevice blue(device[2]);
 
         RgbLedDevice rgbLedDevice(red, green, blue, device[3]);
-        if (rgbLedDevice.exists()) {
+        if (rgbLedDevice.isOk()) {
             LOG(INFO) << "Found notification RGB LED device: " << red.getName() << ", "
                       << green.getName() << ", " << blue.getName();
             devices.emplace_back(red, green, blue, device[3]);
@@ -156,7 +155,7 @@ static std::vector<LedDevice> getNotificationLedDevices() {
 
     for (const auto& device : kNotificationLedDevices) {
         LedDevice notification(device);
-        if (notification.exists()) {
+        if (notification.isOk()) {
             LOG(INFO) << "Found notification LED device: " << notification.getName();
             devices.emplace_back(notification);
         }
@@ -205,35 +204,34 @@ bool Devices::hasNotificationDevices() const {
     return !mNotificationRgbLedDevices.empty() || !mNotificationLedDevices.empty();
 }
 
-void Devices::setBacklightColor(rgb color) {
+void Devices::setBacklightState(const State& state) {
     for (auto& device : mBacklightDevices) {
-        device.setBrightness(color.toBrightness());
+        device.setState(state);
     }
     for (auto& device : mBacklightLedDevices) {
-        device.setBrightness(color.toBrightness());
+        device.setState(state);
     }
 }
 
-void Devices::setButtonsColor(rgb color) {
+void Devices::setButtonsState(const State& state) {
     for (auto& device : mButtonLedDevices) {
-        device.setBrightness(color.toBrightness());
+        device.setState(state);
     }
 }
 
-void Devices::setKeyboardColor(rgb color) {
+void Devices::setKeyboardState(const State& state) {
     for (auto& device : mKeyboardLedDevices) {
-        device.setBrightness(color.toBrightness());
+        device.setState(state);
     }
 }
 
-void Devices::setNotificationColor(rgb color, LightMode mode, uint32_t flashOnMs,
-                                   uint32_t flashOffMs) {
+void Devices::setNotificationState(const State& state) {
     for (auto& device : mNotificationRgbLedDevices) {
-        device.setBrightness(color, mode, flashOnMs, flashOffMs);
+        device.setState(state);
     }
 
     for (auto& device : mNotificationLedDevices) {
-        device.setBrightness(color.toBrightness(), mode, flashOnMs, flashOffMs);
+        device.setState(state);
     }
 }
 
