@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "406ba9cb_d7374390",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000163
+      },
+      "writtenOn": "2026-04-28T02:21:31Z",
+      "side": 1,
+      "message": "This is required for 15698 to pick cleanly.",
+      "revId": "4b9df0ad1adda56314c0c8f6af1dc65c122e9539",
+      "serverId": "039621b9-0c7c-40f3-867c-684f4bc911d6"
+    }
+  ]
+}
